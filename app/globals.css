@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap");
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Colors derived from the frame */
+    --primary-50: 195 100% 95%;
+    --primary-100: 195 100% 90%;
+    --primary-200: 195 90% 80%;
+    --primary-300: 195 85% 70%;
+    --primary-400: 195 80% 60%;
+    --primary-500: 195 75% 50%;
+    --primary-600: 195 80% 40%;
+    --primary-700: 195 85% 30%;
+    --primary-800: 195 90% 20%;
+    --primary-900: 195 100% 10%;
+
+    --secondary-50: 0 100% 95%;
+    --secondary-100: 0 100% 90%;
+    --secondary-200: 0 90% 80%;
+    --secondary-300: 0 85% 70%;
+    --secondary-400: 0 80% 60%;
+    --secondary-500: 0 75% 50%;
+    --secondary-600: 0 80% 40%;
+    --secondary-700: 0 85% 30%;
+    --secondary-800: 0 90% 20%;
+    --secondary-900: 0 100% 10%;
+
+    --accent-50: 36 100% 95%;
+    --accent-100: 36 100% 90%;
+    --accent-200: 36 90% 80%;
+    --accent-300: 36 85% 70%;
+    --accent-400: 36 80% 60%;
+    --accent-500: 36 75% 50%;
+    --accent-600: 36 80% 40%;
+    --accent-700: 36 85% 30%;
+    --accent-800: 36 90% 20%;
+    --accent-900: 36 100% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 195 75% 50%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary-50: 195 30% 95%;
+    --primary-100: 195 30% 90%;
+    --primary-200: 195 30% 80%;
+    --primary-300: 195 30% 70%;
+    --primary-400: 195 30% 60%;
+    --primary-500: 195 30% 50%;
+    --primary-600: 195 30% 40%;
+    --primary-700: 195 30% 30%;
+    --primary-800: 195 30% 20%;
+    --primary-900: 195 30% 10%;
+
+    --secondary-50: 0 30% 95%;
+    --secondary-100: 0 30% 90%;
+    --secondary-200: 0 30% 80%;
+    --secondary-300: 0 30% 70%;
+    --secondary-400: 0 30% 60%;
+    --secondary-500: 0 30% 50%;
+    --secondary-600: 0 30% 40%;
+    --secondary-700: 0 30% 30%;
+    --secondary-800: 0 30% 20%;
+    --secondary-900: 0 30% 10%;
+
+    --accent-50: 36 30% 95%;
+    --accent-100: 36 30% 90%;
+    --accent-200: 36 30% 80%;
+    --accent-300: 36 30% 70%;
+    --accent-400: 36 30% 60%;
+    --accent-500: 36 30% 50%;
+    --accent-600: 36 30% 40%;
+    --accent-700: 36 30% 30%;
+    --accent-800: 36 30% 20%;
+    --accent-900: 36 30% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 195 30% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-tamil {
+  font-family: "Noto Sans Tamil", sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+
+  .font-tamil {
+    line-height: 1.8;
+  }
+}
+
+/* Improve tap targets on mobile */
+button,
+a {
+  @apply touch-manipulation;
+}
+
