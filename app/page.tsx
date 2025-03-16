@@ -113,6 +113,8 @@ export default function Home() {
                     width={595}
                     height={100} // Adjust height based on the actual frame dimensions
                     className="w-full"
+                    priority
+                    quality={100}
                   />
                 </div>
 
@@ -124,6 +126,8 @@ export default function Home() {
                     height={100} // Adjust height based on the actual frame dimensions
                     alt="Decorative bottom border"
                     className="w-full rotate-180"
+                    priority
+                    quality={100}
                   />
                 </div>
 
